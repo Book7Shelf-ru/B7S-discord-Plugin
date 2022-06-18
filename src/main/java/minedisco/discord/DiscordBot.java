@@ -134,7 +134,7 @@ public class DiscordBot {
       TextChannel textChannel = this.jda.getTextChannelById(DiscordBotSettings.getStatusChannelID());
       this.embedBuilder = new EmbedBuilder();
       this.embedBuilder.setColor(Color.green);
-      this.embedBuilder.setTitle(DiscordBotSettings.getServerName() + " 🟢");
+      this.embedBuilder.setTitle(DiscordBotSettings.getServerName() + "Сервер работает 🟢");
       MessageEmbed embedMessage = this.embedBuilder.build();
 
       textChannel.sendMessageEmbeds(embedMessage).queue(msg -> {
@@ -175,7 +175,7 @@ public class DiscordBot {
       if (msg != null && msg.getEmbeds().size() > 0) {
         MessageEmbed em = msg.getEmbeds().get(0);
         textChannel.editMessageEmbedsById(msg.getId(), new EmbedBuilder(em)
-            .setTitle(DiscordBotSettings.getServerName() + " 🔴").setColor(Color.red).clearFields().build()).complete();
+            .setTitle(DiscordBotSettings.getServerName() + "Сервер не работает 🔴").setColor(Color.red).clearFields().build()).complete();
         this.jda.shutdownNow();
       }
 
