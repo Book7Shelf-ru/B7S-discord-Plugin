@@ -1,10 +1,10 @@
 discord:
-  botToken: "DEFAULTTOKEN"
-  channelID: "DEFAULTCHANNELID"
-  requestAccessChannelID: "ACCESSREQUESTCHANNELID"
-  syncedChannelRoleID: "DEFAULTROLE"
+  botToken: "YOUR_BOT_TOKEN"
+  channelID: "YOUR_CHANNEL_ID"
+  requestAccessChannelID: "YOUR_REQUEST_ACCESS_CHANNEL_ID"
+  syncedChannelRoleID: "YOUR_SYNCED_CHANNEL_ROLE_ID"
   commandPrefix: "!"
-  serverName: "SERVERNAME"
+  serverName: "Book7Shelf"
   statusChannelID: "STATUSCHANNELID"
   statusMessageID: "STATUSMESSAGEID"
 

@@ -1,4 +1,4 @@
-# Book7Shelf-Discord-Bot-
+# Book7Shelf-Discord-Bot
 
 
 

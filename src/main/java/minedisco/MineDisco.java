@@ -25,8 +25,8 @@ public final class MineDisco extends JavaPlugin {
         this.saveDefaultConfig();
         String token = this.getConfig().getString("discord.botToken");
 
-        if (token.isEmpty() || "DEFAULTTOKEN".equals(token)) {
-            getLogger().severe("Please write Discord Bot token to the config.yml");
+        if (token.isEmpty() || "YOUR_BOT_TOKEN".equals(token)) {
+            getLogger().severe("Пожалуйста, напишите токен Discord Bot на config.yml");
         } else {
             this.bot = new DiscordBot(token, getLogger());
 
@@ -67,7 +67,7 @@ public final class MineDisco extends JavaPlugin {
         if (this.bot != null) {
             bot.shutConnection();
         }
-        getLogger().info("MineDisco is disabled");
+        getLogger().info("Discord-B7S отключен");
     }
 
     public void enablePlayerJoinQuitChatListener() {

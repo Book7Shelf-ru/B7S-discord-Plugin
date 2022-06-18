@@ -49,9 +49,9 @@ public class DiscordBot {
       this.jda.awaitReady();
 
     } catch (LoginException e) {
-      this.logger.severe("Logging to the Discord was not successful. Please check, is the token valid.");
+      this.logger.severe("Вход в Discord не удался. Пожалуйста, проверьте, действителен ли токен.");
     } catch (InterruptedException e) {
-      this.logger.severe("Error waiting JDA to load.");
+      this.logger.severe("Ошибка ожидания загрузки JDA.");
     }
   }
 
@@ -61,7 +61,7 @@ public class DiscordBot {
     } else if (DiscordBotSettings.discordStatusChannelIsSet() && DiscordBotSettings.discordStatusMessageIsSet()) {
       this.setStatusOnline();
     } else {
-      this.logger.info("Server status channel has not been set.");
+      this.logger.info("Канал состояния сервера не установлен.");
     }
   }
 
@@ -77,10 +77,10 @@ public class DiscordBot {
             + MarkdownUtil.quoteBlock(MarkdownUtil.bold(sender) + message)).queue();
 
       } else {
-        this.logger.warning("Could not find channel id: " + DiscordBotSettings.getDiscordChannelID());
+        this.logger.warning("Не удалось найти идентификатор канала: " + DiscordBotSettings.getDiscordChannelID());
       }
     } else {
-      this.logger.warning("You have not set integrated Discord channel ID.");
+      this.logger.warning("Вы не установили интегрированный идентификатор канала Discord.");
     }
   }
 
@@ -94,10 +94,10 @@ public class DiscordBot {
       if (textChannel != null) {
         textChannel.sendMessage(message).complete();
       } else {
-        this.logger.warning("Could not find channel id: " + DiscordBotSettings.getDiscordChannelID());
+        this.logger.warning("Не удалось найти идентификатор канала: " + DiscordBotSettings.getDiscordChannelID());
       }
     } else {
-      this.logger.warning("You have not set integrated Discord channel ID.");
+      this.logger.warning("Вы не установили встроенный канал Discord ID.");
     }
   }
 
@@ -110,7 +110,7 @@ public class DiscordBot {
         return true;
       }
     } else {
-      this.logger.warning("You have not set integrated roles ID");
+      this.logger.warning("Вы не установили интегрированные роли ID");
     }
     return false;
   }
@@ -124,7 +124,7 @@ public class DiscordBot {
         return true;
       }
     } else {
-      this.logger.warning("You have not set integrated roles ID");
+      this.logger.warning("Вы не установили интегрированные роли ID");
     }
     return false;
   }
@@ -142,7 +142,7 @@ public class DiscordBot {
       });
 
     } else {
-      this.logger.warning("You have not set status channel id");
+      this.logger.warning("Вы не установили канал статуса id");
     }
     return false;
   }
@@ -163,7 +163,7 @@ public class DiscordBot {
       });
 
     } else {
-      this.logger.warning("You have not set status channel id or message");
+      this.logger.warning("Вы не установили идентификатор канала статуса или сообщение");
     }
     return false;
   }
@@ -180,7 +180,7 @@ public class DiscordBot {
       }
 
     } else {
-      this.logger.warning("You have not set status channel id or message");
+      this.logger.warning("Вы не установили идентификатор канала статуса или сообщение");
     }
     return false;
   }
@@ -202,7 +202,7 @@ public class DiscordBot {
       });
 
     } else {
-      this.logger.warning("You have not set status channel id or message");
+      this.logger.warning("Вы не установили идентификатор канала статуса или сообщение");
     }
     return false;
   }
@@ -234,7 +234,7 @@ public class DiscordBot {
       });
 
     } else {
-      this.logger.warning("You have not set status channel id or message");
+      this.logger.warning("Вы не установили идентификатор канала статуса или сообщение");
     }
     return false;
   }
