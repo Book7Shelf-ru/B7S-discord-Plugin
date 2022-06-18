@@ -1,2 +1,8 @@
-# B7S-discord-Plugin
- 
+# Book7Shelf-Discord-Bot-
+
+
+
+
+
+
+
